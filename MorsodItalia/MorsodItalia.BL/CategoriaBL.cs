@@ -52,5 +52,7 @@ namespace MorsodItalia.BL
             _contexto.Categorias.Remove(categoria);
             _contexto.SaveChanges();
         }
+
+       
     }
 }

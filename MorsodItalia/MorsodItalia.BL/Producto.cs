@@ -18,6 +18,6 @@ namespace MorsodItalia.BL
         public Categoria Categoria { get; set; }
         public double Precio { get; set; }
         public bool Activo { get; set; }
-       
+        public object CategoriaId { get; set; }
     }
 }
