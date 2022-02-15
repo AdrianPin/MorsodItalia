@@ -10,10 +10,12 @@ namespace MorsodItalia.WebAdmin.Controllers
     public class ProductosController : Controller
     {
         ProductosBL _productosBL;
+        CategoriasBL _categoriasBL;
 
         public ProductosController()
         {
             _productosBL = new ProductosBL();
+            _categoriasBL = new CategoriasBL();
         }
 
         // GET: Productos
@@ -27,6 +29,10 @@ namespace MorsodItalia.WebAdmin.Controllers
         public ActionResult crear()
         {
             var nuevoProducto = new Producto();
+            var categorias = _categoriasBL.ObtenerCategorias();
+
+            ViewBag.ListaCategorias =
+                new SelectList(categorias, "Id", "Descripcion");
 
             return View(nuevoProducto);
         }
