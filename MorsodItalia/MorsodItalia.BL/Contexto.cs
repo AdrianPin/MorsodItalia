@@ -10,6 +10,8 @@ namespace MorsodItalia.BL
 {
    public class Contexto: DbContext
     {
+        internal object Clientes;
+
         //public Contexto(): base()
         public Contexto() : base(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDBFilename=" +
         Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\MorsodItaliaDB.mdf")
@@ -24,5 +26,8 @@ namespace MorsodItalia.BL
 
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<ClientesBL>clientes { get; set; }
+        public DbSet<Orden>Ordenes { get; set; }
+        public DbSet<OrdenDetalle>OrdenDetalle { get; set; }
     }
 }

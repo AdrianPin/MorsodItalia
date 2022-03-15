@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MorsodItalia.BL
-{//yes//
+{
     public class CategoriasBL
     {
         Contexto _contexto;

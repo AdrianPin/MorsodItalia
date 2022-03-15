@@ -138,6 +138,11 @@
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -146,6 +151,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\HttPostedFileBase.cs" />
+    <Compile Include="Controllers\OrdenesController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -175,6 +181,8 @@
     <Content Include="Views\Categorias\Editar.cshtml" />
     <Content Include="Views\Categorias\Eliminar.cshtml" />
     <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Ordenes\Index.cshtml" />
+    <Content Include="Views\Ordenes\Crear.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
