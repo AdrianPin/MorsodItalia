@@ -33,10 +33,11 @@ namespace MorsodItalia.WebAdmin.Controllers
         [HttpPost]
         public ActionResult Crear(Categoria categoria)
         {
-             if (ModelState.IsValid) {
-                if (categoria.Descripcion != categoria.Descripcion.Trim())
+            if (ModelState.IsValid)
+            {
+                if(categoria.Descripcion != categoria.Descripcion.Trim())
                 {
-                    ModelState.AddModelError("Descripcion", "la Descripción no debe contener espacios al incio o al final");
+                    ModelState.AddModelError("Descripcion","El nombre de la Descripción no debe contener espacios al inicio o al final");
                     return View(categoria);
                 }
                 _categoriasBL.GuardarCategoria(categoria);
@@ -60,7 +61,7 @@ namespace MorsodItalia.WebAdmin.Controllers
             {
                 if (categoria.Descripcion != categoria.Descripcion.Trim())
                 {
-                    ModelState.AddModelError("Descripcion", "la Descripción no debe contener espacios al incio o al final");
+                    ModelState.AddModelError("Descripcion", "El nombre de la Descripción no debe contener espacios al inicio o al final");
                     return View(categoria);
                 }
                 _categoriasBL.GuardarCategoria(categoria);

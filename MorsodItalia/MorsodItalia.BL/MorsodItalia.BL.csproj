@@ -52,13 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatosdeInicio.cs" />
+    <Compile Include="SeguridadBL.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="OrdenesBL.cs" />
+    <Compile Include="Orden.cs" />
+    <Compile Include="ClientesBL.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="CategoriasBL.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="ClientesBL.cs" />
     <Compile Include="Contexto.cs" />
-    <Compile Include="Orden.cs" />
-    <Compile Include="OrdenesBl.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductosBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

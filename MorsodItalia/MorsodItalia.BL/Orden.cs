@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MorsodItalia.BL
 {
-  
     public class Orden
     {
         public int Id { get; set; }
@@ -18,9 +18,10 @@ namespace MorsodItalia.BL
         public Orden()
         {
             Activo = true;
-            Fecha = DateTime.Now;
+            Fecha = DateTime.Now; 
 
             ListadeOrdenDetalle = new List<OrdenDetalle>();
+
         }
     }
 

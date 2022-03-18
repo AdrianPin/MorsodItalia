@@ -13,18 +13,24 @@ namespace MorsodItalia.BL
         {
             Activo = true;
         }
+
         public int Id { get; set; }
-        [Required(ErrorMessage ="ingrese la descripcion")]
-        [MinLength(3, ErrorMessage = "ingrese minimo 3 caracteres")]
-        [MaxLength(20, ErrorMessage = "ingrese minimo 20 caracteres")]
+
+        [Display(Name = "Descripción")]
+        [Required(ErrorMessage = "Ingrese la Descripción")]
+        [MinLength (3, ErrorMessage ="Ingrese mínimo 3 caracteres")]
+        [MaxLength (60, ErrorMessage ="Ingrese un máximo de 60 caracteres")]
         public string  Descripcion { get; set; }
-        [Required (ErrorMessage ="ingrese el precio")]
-        [Range (0,1000,ErrorMessage ="ingrese un precio entre 0 y 1000")]
+
+        [Required(ErrorMessage = "Ingrese el Precio")]
+        [Range(0,1000, ErrorMessage ="Ingrese un precio entre 0 y 1000")]
         public double Precio { get; set; }
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
-        [Display(Name ="imagen")]
-       public string UrlImagen { get; set; } 
+
+        [Display(Name = "Imagen")]
+        public string UrlImagen { get; set; }
+
         public bool Activo { get; set; }
     }
 }

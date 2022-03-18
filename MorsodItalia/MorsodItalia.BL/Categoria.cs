@@ -5,7 +5,8 @@ namespace MorsodItalia.BL
     public class Categoria
     {
         public int Id { get; set; }
-        [Required(ErrorMessage ="ingrese la categoria")]
+
+        [Required(ErrorMessage = "Ingrese la Categoría")]
         public string Descripcion { get; set; }
     }
 }

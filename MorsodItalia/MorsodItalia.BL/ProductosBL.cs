@@ -19,19 +19,33 @@ namespace MorsodItalia.BL
 
         public List<Producto> ObtenerProductos()
         {
-            ListadeProductos =  _contexto.Productos
+            ListadeProductos = _contexto.Productos
                 .Include("Categoria")
+                .OrderBy(r => r.Categoria.Descripcion)
+                .ThenBy(r => r.Descripcion)
                 .ToList();
 
-            return  ListadeProductos;
+            return ListadeProductos;
+        }
+
+        public List<Producto> ObtenerProductosActivos()
+        {
+            ListadeProductos = _contexto.Productos
+                .Include("Categoria")
+                .Where(r => r.Activo == true)
+                .OrderBy(r => r.Descripcion)
+                .ToList();
+
+            return ListadeProductos;
         }
 
         public void GuardarProducto(Producto producto)
         {
-            if(producto.Id == 0)
+            if (producto.Id == 0)
             {
                 _contexto.Productos.Add(producto);
-            } else
+            }
+            else
             {
                 var productoExistente = _contexto.Productos.Find(producto.Id);
 
@@ -39,9 +53,8 @@ namespace MorsodItalia.BL
                 productoExistente.CategoriaId = producto.CategoriaId;
                 productoExistente.Precio = producto.Precio;
                 productoExistente.UrlImagen = producto.UrlImagen;
-                //productoExistente.Activo = producto.Activo;
             }
-            
+
             _contexto.SaveChanges();
         }
 
@@ -49,7 +62,7 @@ namespace MorsodItalia.BL
         {
             var producto = _contexto.Productos
                 .Include("Categoria").FirstOrDefault(p => p.Id == id);
-            
+
             return producto;
         }
 
