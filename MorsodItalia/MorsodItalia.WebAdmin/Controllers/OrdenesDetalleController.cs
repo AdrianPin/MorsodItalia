@@ -28,6 +28,7 @@ namespace MorsodItalia.WebAdmin.Controllers
             return View(orden);
         }
 
+
         public ActionResult Crear(int id)
         {
             var nuevaOrdenDetalle = new OrdenDetalle();

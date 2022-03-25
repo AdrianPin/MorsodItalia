@@ -46,7 +46,7 @@
                 <input type="file" name="imagen" id="imagen" />
             </div>
             <div class="col-md-8">
-                <img src="@Model.UrlImagen" alt="@Model.Descripcion" style="width:200px; height:auto;"/>
+                <img src="@Model.UrlImagen" alt="@Model.UrlImagen" style="width:200px; height:auto;"/>
             </div>
         </div>
 
@@ -57,8 +57,6 @@
                     @Html.EditorFor(model => model.Activo)
                     @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
                 </div>
-                @*@Html.EditorFor(model => model.Activo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })*@
             </div>
         </div> 
 
@@ -73,3 +71,7 @@
 <div>
     @Html.ActionLink("Regresar a la Lista", "Index")
 </div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

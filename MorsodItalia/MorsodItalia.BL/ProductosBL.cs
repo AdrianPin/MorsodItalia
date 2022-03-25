@@ -53,6 +53,7 @@ namespace MorsodItalia.BL
                 productoExistente.CategoriaId = producto.CategoriaId;
                 productoExistente.Precio = producto.Precio;
                 productoExistente.UrlImagen = producto.UrlImagen;
+                productoExistente.Activo = producto.Activo;
             }
 
             _contexto.SaveChanges();

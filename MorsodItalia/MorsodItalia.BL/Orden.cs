@@ -21,7 +21,6 @@ namespace MorsodItalia.BL
             Fecha = DateTime.Now; 
 
             ListadeOrdenDetalle = new List<OrdenDetalle>();
-
         }
     }
 
