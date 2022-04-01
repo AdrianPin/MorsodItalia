@@ -16,7 +16,7 @@ namespace MorsodItalia.BL
             _contexto = new Contexto();
             ListadeProductos = new List<Producto>();
         }
-
+        //ddd
         public List<Producto> ObtenerProductos()
         {
             ListadeProductos = _contexto.Productos
