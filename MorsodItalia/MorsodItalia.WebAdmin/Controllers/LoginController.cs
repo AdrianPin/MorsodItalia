@@ -8,6 +8,7 @@ using System.Web.Security;
 
 namespace MorsodItalia.WebAdmin.Controllers
 {
+    
     public class LoginController : Controller
     {
         SeguridadBL _seguridadBL;

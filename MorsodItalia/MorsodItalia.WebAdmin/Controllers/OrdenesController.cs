@@ -8,6 +8,7 @@ using System.Web.Security;
 
 namespace MorsodItalia.WebAdmin.Controllers
 {
+    [Authorize]
     public class OrdenesController : Controller
     {
         OrdenesBL _ordenesBL;

@@ -13,7 +13,7 @@ namespace MorsodItalia.BL
         protected override void Seed(Contexto contexto)
         {
             var nuevoUsuario = new Usuario();
-            nuevoUsuario.Nombre = "admin";
+            nuevoUsuario.Nombre = "Marcela";
             nuevoUsuario.Contrasena = Encriptar.CodificarContrasena("123");
 
             contexto.Usuarios.Add(nuevoUsuario);
