@@ -40,7 +40,7 @@ namespace MorsodItalia.BL
 
             byte[] bIn = Encoding.Unicode.GetBytes(contrasena);
             byte[] bSalt = Convert.FromBase64String(salt);
-            byte[] bAll = new byte[bSalt.Length + bIn.Length];
+            byte[] bAll = new byte[bSalt.Length + bIn.Length];//nice//
 
             Buffer.BlockCopy(bSalt, 0, bAll, 0, bSalt.Length);
             Buffer.BlockCopy(bIn, 0, bAll, bSalt.Length, bIn.Length);
